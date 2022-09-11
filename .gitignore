@@ -1,5 +1,11 @@
+# Project files
+.idea
+
+# Generated files
 target
 /bin/
-.*
+.bsp
+
+# Runtime files
 *.log
 *.log.*
