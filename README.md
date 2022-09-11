@@ -6,7 +6,7 @@ The goal of this example is to provide a multi-project build using `sbt` providi
 * Sub-projects can depend on other sub-projects
 * Only *deliverable* sub-projects produce a *fat-jar* using [sbt-assembly](https://github.com/sbt/sbt-assembly)
 
-# Example structure
+## Example structure
 * sbt-multi-project-example/
     * common/
         * src/
@@ -21,3 +21,13 @@ The goal of this example is to provide a multi-project build using `sbt` providi
         * build.properties
         * plugins.sbt
     * build.sbt
+
+## sbt wrapper
+
+Provided by [sbt-extras](https://github.com/dwijnand/sbt-extras)
+
+It is already installed in this repository but for any new install, get it using:
+
+```bash
+curl -Ls https://raw.githubusercontent.com/dwijnand/sbt-extras/master/sbt > sbt.sh && chmod 0755 sbt.sh
+```
