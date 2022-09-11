@@ -1,3 +1,5 @@
+import pureconfig.generic.ProductHint
+
 object Main extends App {
   println("multi2 can use common sub-project")
 

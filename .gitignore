@@ -9,3 +9,4 @@ target
 # Runtime files
 *.log
 *.log.*
+dumps/
