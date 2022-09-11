@@ -50,16 +50,16 @@ lazy val multi2 = project
 
 lazy val dependencies =
   new {
-    val logbackV        = "1.2.3"
-    val logstashV       = "4.11"
+    val logbackV        = "1.4.0"
+    val logstashV       = "7.2"
     val scalaLoggingV   = "3.9.5"
-    val slf4jV          = "1.7.25"
-    val typesafeConfigV = "1.3.1"
+    val slf4jV          = "2.0.0"
+    val typesafeConfigV = "1.4.2"
     val pureconfigV     = "0.17.1"
-    val monocleV        = "1.6.0"
+    val monocleV        = "2.1.0"
     val akkaV           = "2.6.20"
-    val scalatestV      = "3.0.8"
-    val scalacheckV     = "1.14.0"
+    val scalatestV      = "3.2.12"
+    val scalacheckV     = "1.16.0"
 
     val logback        = "ch.qos.logback"             % "logback-classic"          % logbackV
     val logstash       = "net.logstash.logback"       % "logstash-logback-encoder" % logstashV
@@ -125,7 +125,7 @@ lazy val assemblySettings = Seq(
     case PathList("META-INF", xs @ _*) => MergeStrategy.discard
     case "application.conf"            => MergeStrategy.concat
     case x =>
-      val oldStrategy = (assemblyMergeStrategy in assembly).value
+      val oldStrategy = (assembly / assemblyMergeStrategy).value
       oldStrategy(x)
   }
 )
